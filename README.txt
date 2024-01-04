@@ -50,7 +50,7 @@ Additional Info
         MIT License.
 
     Contact:
-        gabrielcarroll11@gmail.com
+        gabrielcarrollart@gmail.com
 
 Enjoy creating your unique profile description! 😊
 
