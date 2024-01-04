@@ -58,19 +58,20 @@ while True:
         else:
             print ("Invalid Input: Please retry")
             
-    
-    
-    
-
+    # Ask the user for a bio
+    bio = input ("Why dont you write a short bio about yourself? ")
+    print ("This is your Bio: " + bio)
+    with open ("descript.txt", "a") as descript:
+        descript.write ("About Me: " + bio + "\n")
         
+    # Ask for a fun fact about the user
+    fact = input ("How about a fun fact about yourself? ")
+    with open ("descript.txt", "a") as descript:
+        descript.write ("Fun Fact about me: " + fact + "\n")
         
-            
-    
-            
-        
-        
-                
-        
-             
-
-
+    # Give the user the finished profile
+    print ("Looks like we are all done now! Just copy this text then add it into your profile description! ")
+    with open ("descript.txt", "r") as descript:
+        content = descript.read()
+        print (content)
+    break
