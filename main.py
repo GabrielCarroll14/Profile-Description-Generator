@@ -35,8 +35,33 @@ while True:
     # Create a sub loop for creating where the user is based        
     while True:
         print ("Lets fill in your details for the second option! ")
+     
+        # Ask the user where they  are based   
+        location = input ("Please enter the location you are based in. ")
+    
+        choice = input ("Are you sure you would like to set your location to be in " + location + "? (y, n)" )
         
-    choice = input ("Please enter the location you are based in. ")
+        if choice == "y":
+            # Print a message to the user confirming that they have chosen the selected option to be there location
+            print ("Great! This is the second line of your profile: I am based in " + location + "! ")
+            # Write this data to the file
+            with open ("descript.txt", "a" ) as descript:
+                descript.write ("I am based in " + location + "! \n")
+            # Break out of the subloop
+            break
+        
+        # If the user has decided to reset their location
+        elif choice == "n":
+            print ("Lets try that one more time shall we. ")
+            
+        # If the user has put in a invalid input
+        else:
+            print ("Invalid Input: Please retry")
+            
+    
+    
+    
+
         
         
             
