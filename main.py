@@ -1,0 +1,51 @@
+# Print a welcome message to the user
+print ("Hi, 👋  Welcome to profile description generator! Lets begin! ")
+
+# Create the main loop
+while True:
+    
+    # Create the sub loop for asking the user for their name
+    while True:
+        print ("Lets fill in your details for the first option! ")
+    
+        # Ask the user to input a name
+        name = input ("Hi, 👋 My name is ENTER NAME HERE-")
+        
+        # Ask the user if the name is correct
+        choice = input ("Are you sure you would like your name to be " + name + "? (y, n) ")
+        
+        # If the user is sure they would like their name to be the one input run this
+        if choice == "y":
+            # Print a message to the user confirming the first line of your profile
+            print ("Great! The first line of your profile is this! Hi, My name is " + name + "! ")
+            # Write this data to the file
+            with open ("descript.txt", "w" ) as descript:
+                descript.write ("Hi, My name is " + name + "! \n")
+            # Break out of the subloop
+            break
+        
+        # If the user has decided to reset their name
+        elif choice == "n":
+            print ("Lets try that one more time shall we. ")
+            
+        # If the user has put in a invalid input
+        else:
+            print ("Invalid Input: Please retry")
+    
+    # Create a sub loop for creating where the user is based        
+    while True:
+        print ("Lets fill in your details for the second option! ")
+        
+    choice = input ("Please enter the location you are based in. ")
+        
+        
+            
+    
+            
+        
+        
+                
+        
+             
+
+
