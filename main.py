@@ -38,9 +38,11 @@ while True:
      
         # Ask the user where they  are based   
         location = input ("Please enter the location you are based in. ")
-    
+
+        # Ask user for their location
         choice = input ("Are you sure you would like to set your location to be in " + location + "? (y, n)" )
         
+        # If user is sure about their location
         if choice == "y":
             # Print a message to the user confirming that they have chosen the selected option to be there location
             print ("Great! This is the second line of your profile: I am based in " + location + "! ")
@@ -60,18 +62,25 @@ while True:
             
     # Ask the user for a bio
     bio = input ("Why dont you write a short bio about yourself? ")
+    # Print the usersbio back to them
     print ("This is your Bio: " + bio)
+    # Write the bio to the file
     with open ("descript.txt", "a") as descript:
         descript.write ("About Me: " + bio + "\n")
         
     # Ask for a fun fact about the user
     fact = input ("How about a fun fact about yourself? ")
+    # Write the fact to the file
     with open ("descript.txt", "a") as descript:
         descript.write ("Fun Fact about me: " + fact + "\n")
         
     # Give the user the finished profile
     print ("Looks like we are all done now! Just copy this text then add it into your profile description! ")
+    # Open the finished file in read mode
     with open ("descript.txt", "r") as descript:
+        # Assign the description into the variable content
         content = descript.read()
+        # print the content
         print (content)
+    # Break out of the main loop
     break
